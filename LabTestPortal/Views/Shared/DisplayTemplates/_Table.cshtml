@@ -1,0 +1,9 @@
+﻿@model IEnumerable<LabTestPortal.Models.Person>
+
+@foreach (var p in Model)
+{
+    string trID = Guid.NewGuid().ToString("N");
+    <tr id="@trID">
+        @Html.Partial("DisplayTemplates/_TableRow", p)
+    </tr>
+}

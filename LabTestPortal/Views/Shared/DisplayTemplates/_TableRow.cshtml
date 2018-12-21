@@ -1,0 +1,17 @@
+﻿@model LabTestPortal.Models.Person
+@using LabTestPortal.CustomClass
+
+@{
+    string stateCode = CommonHelper.GetStateCodeByID(Model.state_id.Value);
+
+}
+
+<th scope="row">
+    <input type="button" class="cellBtnEdit btn btn-link" name="@Model.person_id" value="Edit" />
+</th>
+<td>@Model.first_name</td>
+<td>@Model.last_name</td>
+<td>@stateCode</td>
+<td>@Model.gender</td>
+<td>@Model.dob.Value.ToString("MM/dd/yyyy")</td>
+
